@@ -6,6 +6,9 @@ This project is an automated system designed to extract essential information fr
 - Formatting the extracted data for LLM consumption.
 - Sending queries to the LLM and handling responses.
 
+## Dash-Board View
+![Dash-Board Image](C:\Users\RDRL\Videos\Captures\AI-Details-Scrapping.png)
+
 ## Video Recording 
 - **Loom video Link**  : https://www.loom.com/share/e5347765da674717adb7db5005982e50?sid=8ce819ed-9221-4ace-8f3a-93f6d1704d30
 

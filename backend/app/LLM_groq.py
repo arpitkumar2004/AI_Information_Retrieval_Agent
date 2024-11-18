@@ -3,6 +3,7 @@ import logging
 from typing import Dict
 from groq import Groq
 from scraping import scrape_essential_info
+from config import Bing_api_key, groq_api_key
 
 
 # Configure logging for better debugging and tracking
@@ -148,12 +149,10 @@ if __name__ == "__main__":
     url = "https://www.ril.com/contact-us"
     test_data= scrape_essential_info(url=url)
     
-    api_key = "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"
+    api_key = groq_api_key
+    
     
     query = "what is email this company?"
-    
-    # response= format_scraped_data(test_data)
-    # print(format_scraped_data(test_data)
     response = query_llm_from_text(test_data, query, api_key)
 
     print(response)

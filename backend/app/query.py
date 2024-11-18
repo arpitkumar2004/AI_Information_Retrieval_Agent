@@ -1,6 +1,8 @@
 import pandas as pd
 import requests as r
 import logging
+from config import Bing_api_key
+
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -24,23 +26,6 @@ def load_data(file_path: str) -> pd.DataFrame:
     except Exception as e:
         logging.error(f"Error loading data: {e}")
         return None
-
-
-# def get_user_query() -> str:
-#     """
-#     Prompt the user to enter a query.
-    
-#     Returns:
-#         str: The query input by the user.
-#     """
-#     while True:
-#         query = input("Please enter the information you need (e.g., 'Get me the email of the company'): ")
-        
-#         # Ensure the query is not empty
-#         if query.strip():
-#             return query
-#         else:
-#             logging.warning("Invalid input. Please enter a valid query.")
 
 
 def search_urls(query: str, api_key: str) -> list:
@@ -83,17 +68,15 @@ if __name__ == "__main__":
     # Example usage:
     try:
         # Load data and get a query from the user
-        # file_path = input("Enter the path to your CSV file: ")
         file_path = r'C:\Users\RDRL\Desktop\Desktop\Checkit\Project BreakoutAI - front-end\project\backend\app\uploads\test csv - Sheet1.csv'
         df = load_data(file_path)
         
         if df is not None:
-            # query = get_user_query()
             # Example: Query formed from the first entry in the DataFrame
             query = f"Get me contact information of {df[df.columns[0]][0]}."
             
             # Search for URLs based on the query
-            api_key = "fdc2c93a856043db8f1717ada9f7c8dc"  # Replace with your actual API key
+            api_key = Bing_api_key  # Replace with your actual API key
             search_results = search_urls(query, api_key)
             
             if search_results:
