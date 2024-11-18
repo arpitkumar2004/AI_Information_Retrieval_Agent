@@ -5,7 +5,10 @@ from config import Bing_api_key, groq_api_key
 
 def main():
    
-    query = "Get me support or contact email of "
+
+
+    # Example for single entry
+    query = "What is email of company Reliance"
 
     # Pipeline
     url = search_urls(query,Bing_api_key)[0]
@@ -13,6 +16,10 @@ def main():
     result = query_llm_from_text(scrapped_text,query, api_key=groq_api_key)
     print(result)
 
+
+    # # For multiple Entities in the columns {uncomment to run for multiple entries}
+    
+    # query = "What is email of company"
     # file_path= r'C:\Users\RDRL\Desktop\Desktop\Checkit\Project BreakoutAI - front-end\project\backend\app\uploads\test csv - Sheet1.csv'
     # df = load_data(file_path)
     

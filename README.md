@@ -6,6 +6,9 @@ This project is an automated system designed to extract essential information fr
 - Formatting the extracted data for LLM consumption.
 - Sending queries to the LLM and handling responses.
 
+## Video Recording 
+- **Loom video Link**  : https://www.loom.com/share/e5347765da674717adb7db5005982e50?sid=8ce819ed-9221-4ace-8f3a-93f6d1704d30
+
 ## Features
 - **Web Scraping Module**: Extracts metadata, contact information, and social media links.
 - **Data Formatting**: Processes and formats extracted data into a structured string for LLM querying.
@@ -22,8 +25,8 @@ This project is an automated system designed to extract essential information fr
 ## Installation
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/username/project-name.git
-   cd project-name
+   git clone https://github.com/arpitkumar2004/AI_Information_Retrieval_Agent.git
+
    ```
 2. **Set up a virtual environment**:
    ```bash

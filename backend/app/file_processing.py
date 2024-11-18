@@ -89,13 +89,6 @@ def process_file():
                 results[entity] = "LLM error"
             else:
                 results[entity] = llm_response
-                     
-        # results = {
-        #         "Reliance": "contact@reliance.com",
-        #         "Meta": "meta@techinc.com",
-        #         "OpenAI": "contact@openai.com",
-        #         # Add more mappings as needed
-        #         }
         
         
         # Create the final response structure
